@@ -8,13 +8,13 @@ The english version contains 33 cells. The goal is to find if there is a series 
 As explained in the scientific article written by Masashi KIYOMI, Tomomi MATSUI from the university of Tokyo, the peg solitaire can be modeled by the following Mixed Integer Program : 
 </br>
 $$
-\begin{split}
+\begin{center}
     IP1: & \text{find} \quad & (x^1, ... , x^l) &\\
                & s.t.      &A(x^1+ ... + x^l) = p_s - p_f ,&\\
                &            &0 \le p_s - (x^1+ ... + x^k) \le 1 , \quad &\forall k \in \{1, ..., l\} \\
                &            &x^k_1 + ... + x^k_m = 1 , \quad           &\forall k \in \{1, ..., l\} \\
                &            &x^k \in \{0,1\}^m   & \forall k \\
-\end{split}
+\end{center}
 $$
 </br>
 However solving this problem can take a lot of time, so we chose to implement the second method proposed by Kiomi and Matsui, which is based on a back-tracking search Algorithm. (see the solvprog function) </br>
