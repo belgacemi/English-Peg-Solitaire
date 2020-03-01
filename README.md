@@ -13,10 +13,11 @@ As explained in the scientific article written by Masashi KIYOMI, Tomomi MATSUI 
 However solving this problem can take a lot of time, so we chose to implement the second method proposed by Kiomi and Matsui, which is based on a back-tracking search Algorithm. (see the solvprog function) </br>
 In order to prune the search space we used two different methods: 
 1.    First of all, it's proven that there is an upper bound for how many times each jump j is used in the path to get from the intial to the final configuration. 
-This upper band is the solution for the following MIP: </br>
+This upper band is the solution for the following MIP: 
+</br>
 
-                            ![alt text](https://github.com/belgacemi/English-Peg-Solitaire/blob/master/images/IP2.jpg)
-
+   ![alt text](https://github.com/belgacemi/English-Peg-Solitaire/blob/master/images/IP2.jpg)
+</br>
 We have used the solutions for this MIP (saved in an array) to prune the search space. 
 If RUBj is unfeasible, the peg solitaire problem with the given intial and final configuration doesn't have any solution
 2.  We have also used  a hash table where we have stored every configuartion of the cells that have shown to lead to no solution in order to speed up the backtracking algorithm .(see sansissue and solvprog functions).
