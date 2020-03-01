@@ -23,6 +23,5 @@ If RUBj is unfeasible, the peg solitaire problem with the given intial and final
 2.  We have also used  a hash table where we have stored every configuartion of the cells that have shown to lead to no solution in order to speed up the backtracking algorithm .(see sansissue and solvprog functions).
 
 </br>
-</br>
 We have chosen two ways to represent every configuration of the cells : the first one using a pandas dataframe (which is more pleasent visually) and the second one is an array. The cells are represented in this array in a logical order starting from the upper left of the game. Empty cells are represented by 0, the other ones are represented by the value one. </br>
 We have used to solve the MIP RUBj the OR-tools developped by Google. (see the solving function)
